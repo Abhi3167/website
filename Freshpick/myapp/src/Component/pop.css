@@ -1,0 +1,10 @@
+.list:hover{
+ 
+    background-color: #f8cb46;
+  
+    transition: all 0.3s ease-in-out;
+}
+
+.list{
+    padding: 10px;
+}

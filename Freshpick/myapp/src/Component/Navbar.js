@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { IoCartSharp } from "react-icons/io5";
+import PopoverPositionedExample from './pop_overlay';
 function OffcanvasExample() {
   return (
     <>
@@ -37,8 +38,10 @@ function OffcanvasExample() {
                   <Button variant="outline-success">Search</Button>
                 </Form>
                 <Nav className="justify-content-left flex-grow-1 pe-3  px-4">
-                  <Nav.Link href="#action1" className='px-4'>Login</Nav.Link>
+                  
                   <Button variant="success" className='px-4' style={{width:' '}}> <IoCartSharp style={{fontSize:'20px'}} /> My Cart</Button>
+                  
+                  <PopoverPositionedExample> </PopoverPositionedExample>
                   {/* <Nav.Link href="#action2">Link</Nav.Link> */}
                   {/* <NavDropdown
                     title="Dropdown"
