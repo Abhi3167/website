@@ -7,6 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { IoCartSharp } from "react-icons/io5";
 import PopoverPositionedExample from './pop_overlay';
+
+
 function OffcanvasExample() {
   return (
     <>

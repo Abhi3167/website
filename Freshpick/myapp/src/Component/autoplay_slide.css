@@ -1,0 +1,35 @@
+/* .slick-slide {
+ width: 100px !important;
+} */
+ .sliderbutton{
+
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: larger;
+ }
+.slider-container
+{
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+}
+.slider-container
+{
+   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .sliderbutton{
+
+        border: none;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: medium;
+     }
+     .slider-container
+{
+    border-bottom: 1px solid #e0e0e0;
+    padding: 5px;
+}
+   
+  }
