@@ -12,7 +12,6 @@ import img10 from './image/aimg010.png'
 import img11 from './image/aimg011.png'
 import img12 from './image/aimg012.png'
 import './hero.css'
-import data from './data'
 const Hero = () => {
   return <>
  <div className='laptop '>
@@ -35,7 +34,7 @@ const Hero = () => {
  </div>
 <div className="container">
  <div className="row mt-3">
-    <div className='image_header'> Grocery </div>
+    <div className='image_header'>Snacks & Drinks</div>
      <div className="col d-flex justify-content-around">
          <img src={img10} alt=""  height="200px" className='image-section'/>
          <img src={img9} alt="" height="200px" className='image-section'/>
@@ -52,39 +51,8 @@ const Hero = () => {
      </div>
  </div>
 </div>
-
-{/* kitchen */}
-
-<div className="container">
- <div className="row mt-3">
-    <div className='image_header'>Kitchen</div>
-     <div className="col d-flex justify-content-around">
-         <img src={img10} alt=""  height="200px" className='image-section'/>
-         <img src={img9} alt="" height="200px" className='image-section'/>
-         <img src={img11} alt="" height="200px"className='image-section'/>
-         <img src={img12} alt="" height="200px"className='image-section'/>
-       
-     </div>
-     <div className="col d-flex justify-content-around">
-         <img src={img10} alt=""  height="200px" className='image-section'/>
-         <img src={img9} alt="" height="200px" className='image-section'/>
-         <img src={img11} alt="" height="200px"className='image-section'/>
-         <img src={img12} alt="" height="200px"className='image-section'/>
-       
-     </div>
- </div>
-</div>
-{
-    data.map((item)=>{
-        return <div>
-            <img src={item.image} alt="" />
-            <div>{item.name}</div>
-            <div>{item.category}</div>  
-        </div>
-        
-})
-}
+  
   </>
-
 }
-export default Hero;
+
+export default Hero
