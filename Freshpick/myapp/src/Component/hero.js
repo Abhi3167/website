@@ -74,16 +74,10 @@ const Hero = () => {
      </div>
  </div>
 </div>
-{
-    data.map((item)=>{
-        return <div>
-            <img src={item.image} alt="" />
-            <div>{item.name}</div>
-            <div>{item.category}</div>  
-        </div>
+
         
-})
-}
+
+
   </>
 
 }

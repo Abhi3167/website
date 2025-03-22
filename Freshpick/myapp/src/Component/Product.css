@@ -1,0 +1,18 @@
+.product-image
+{
+    height: 80px;
+}
+.product-text
+{
+    font-size: 12px;
+    font-weight: 300;
+    color: #333030;
+    text-align: center;
+}
+.product-card:hover
+{
+     transform: scale(.95);
+     transition: all .3s ease-in-out;
+     background-color: #f3f3f3;
+     border-radius: 20px;
+}
