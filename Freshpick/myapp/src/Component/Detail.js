@@ -6,7 +6,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import Spinner from 'react-bootstrap/Spinner';
+import './detail.css'
+import { useState } from 'react';
 const Detail = () => {
+    let [show, setShow] = useState(true);
+    
     const navigate = useNavigate();
     const data = useSelector((state) => state.detail);
     console.log(data,"data")
@@ -14,14 +19,30 @@ const Detail = () => {
 
     // window.scrollY=0
   return <>
-  <Container className="mt-4">
+           
+  
+       <Container className="mt-4">
             Back Button
             <Button variant="secondary" onClick={() => navigate(-1)} className="mb-3">
                 ← Back
             </Button>
+            { show ?  <div className='loader'>
+        <div className='LODER2'>
+        <Spinner animation="grow" />
+           <Spinner animation="grow" />
+           <Spinner animation="grow" />
+        </div>
+          </div>:null}
+
+       {
+        setTimeout(() => {
+            setShow(false)
+
+        }, 3000)
+       }
 
             {data && (
-                <Row className="align-items-center">
+                <Row className={`align-items-center  mt-4 ${show ? 'd-none' : ''}`}>
                     {/* Product Image */}
                     <Col md={5} className="text-center">
                         <Card className="shadow-lg">
@@ -98,6 +119,8 @@ const Detail = () => {
                 </>
             )}
         </Container>
+
+
   </>
 }
 
