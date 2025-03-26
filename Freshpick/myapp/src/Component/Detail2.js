@@ -10,19 +10,17 @@ import Spinner from 'react-bootstrap/Spinner';
 import './detail.css'
 import { useState } from 'react';
 import More_items from './More_items';
-const Detail = () => {
-    let [show, setShow] = useState(true);
+const Detail2 = () => {
+     let [show, setShow] = useState(true);
+        
+        const navigate = useNavigate();
+        const data = useSelector((state) => state.detail);
+        console.log(data,"data")
+        console.log(window.scrollY,"scrollY")
     
-    const navigate = useNavigate();
-    const data = useSelector((state) => state.detail);
-    console.log(data,"data")
-    console.log(window.scrollY,"scrollY")
-
-    // window.scrollY=0
+        // window.scrollY=0
   return <>
-           
-  
-       <Container className="mt-4">
+   <Container className="mt-4">
             Back Button
             <Button variant="secondary" onClick={() => navigate(-1)} className="mb-3">
                 ← Back
@@ -122,8 +120,7 @@ const Detail = () => {
             <More_items></More_items>
         </Container>
 
-
   </>
 }
 
-export default Detail
+export default Detail2
