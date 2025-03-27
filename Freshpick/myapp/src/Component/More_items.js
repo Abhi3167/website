@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react'
 import { useNavigate ,useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { myproductdataredux } from './store/DetailSlics';
+import './More_items.css';
 const More_items = () => {
     let {id}=useParams()
   const dispatch=useDispatch()
@@ -56,13 +57,15 @@ const More_items = () => {
   return <>
 
 <div className='container'>
-    <div className='row'>
-
+    <div className='row d-flex justify-content-evenly flex-row'>
+       
+    <h3 className="mt-5 text-center">YOU MIGHT ALSO LIKE</h3>
+         
         {
             moreItems.map((element)=>
             {
               return<>
-                <div className='col-md-2 col-xs-2  col-3 p-2 product-card'  onClick={()=>{getdata(element)}}>
+                <div className='col-md-2 col-xs-2  col-3 p-2 product-card2'  onClick={()=>{getdata(element)}}>
                     {/* {
                         if(element.id==19)
                         {
@@ -72,7 +75,7 @@ const More_items = () => {
                         {
                             <div><img src={element.thumbnail} className='product-image'></img></div>
                     } */}
-                    {element.id==19? <div><img src={images['chicken']} className='product-image'></img></div>:<div className='text-center'><img src={element.thumbnail} className='product-image'></img></div>}
+                    {element.id==19? <div><img src={images['chicken']} className='product-image1'></img></div>:<div className='text-center bold'><img src={element.thumbnail} className='product-image1'></img></div>}
                   {/* } */}
                     
                      <div className='product-text text-center'>{element.title}</div>
