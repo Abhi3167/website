@@ -57,21 +57,21 @@ const Hero = () => {
 
 <div className="container">
  <div className="row mt-3">
-    <div className='image_header'>Kitchen</div>
-     <div className="col d-flex justify-content-around">
+    <div className='image_header'>Groceries</div>
+     {/* <div className="col d-flex justify-content-around">
          <img src={img10} alt=""  height="200px" className='image-section'/>
          <img src={img9} alt="" height="200px" className='image-section'/>
          <img src={img11} alt="" height="200px"className='image-section'/>
          <img src={img12} alt="" height="200px"className='image-section'/>
        
-     </div>
-     <div className="col d-flex justify-content-around">
+     </div> */}
+     {/* <div className="col d-flex justify-content-around">
          <img src={img10} alt=""  height="200px" className='image-section'/>
          <img src={img9} alt="" height="200px" className='image-section'/>
          <img src={img11} alt="" height="200px"className='image-section'/>
          <img src={img12} alt="" height="200px"className='image-section'/>
        
-     </div>
+     </div> */}
  </div>
 </div>
 

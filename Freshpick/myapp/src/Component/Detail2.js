@@ -4,20 +4,25 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import Spinner from 'react-bootstrap/Spinner';
 import './detail.css'
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import More_items from './More_items';
 const Detail2 = () => {
+      let {id}=useParams()
      let [show, setShow] = useState(true);
         
         const navigate = useNavigate();
         const data = useSelector((state) => state.detail);
         console.log(data,"data")
         console.log(window.scrollY,"scrollY")
-    
+          
+        useEffect(()=>
+        {
+     setShow(true)
+        },[data])
         // window.scrollY=0
   return <>
    <Container className="mt-4">
@@ -35,6 +40,7 @@ const Detail2 = () => {
 
        {
         setTimeout(() => {
+
             setShow(false)
 
         }, 3000)

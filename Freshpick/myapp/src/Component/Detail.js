@@ -4,13 +4,15 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,useParams} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import Spinner from 'react-bootstrap/Spinner';
 import './detail.css'
 import { useState } from 'react';
 import More_items from './More_items';
 const Detail = () => {
+
+  
     let [show, setShow] = useState(true);
     
     const navigate = useNavigate();

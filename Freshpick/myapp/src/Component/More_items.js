@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { myproductdataredux } from './store/DetailSlics';
 const More_items = () => {
+    let {id}=useParams()
   const dispatch=useDispatch()
     const navigate=useNavigate()
      let [data1,setData]=useState([])
@@ -37,15 +38,16 @@ const More_items = () => {
             {
               dispatch(myproductdataredux(element))
               console.log(element)
-              navigate('/detaill')
+              navigate(`/detaill/${element.id}`)
             }
 
             useEffect(()=>
          {
              
             urlData()
+            setData(null)
            
-         },[])
+         },[id])
     
         
        
