@@ -1,0 +1,24 @@
+.img
+{
+    width: 100vw;
+    height: 80vh;
+    object-fit: contain;
+}
+.carousel-control-prev-icon
+{
+    background-color: black;
+}
+.carousel-control-next-icon
+{
+    background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .img
+    {
+        width: 100vw;
+        height: fit-content;
+        object-fit: contain;
+    }
+   
+  }

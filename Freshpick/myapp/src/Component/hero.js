@@ -16,7 +16,7 @@ import data from './data'
 const Hero = () => {
   return <>
  <div className='laptop '>
- <div> <img src={img1} alt="" style= {{width: '100%'}} className="px-5"/></div>
+ {/* <div> <img src={img1} alt="" style= {{width: '100%'}} className="px-5"/></div>
 
 <div className="container">
  <div className="row"   >
@@ -30,7 +30,7 @@ const Hero = () => {
          <img src={img5} alt="" className="img-fluid"/>
      </div>
  </div>
-</div>
+</div> */}
 
  </div>
 <div className="container">

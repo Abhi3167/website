@@ -8,6 +8,8 @@ import Home from './Component/home';
 import OffcanvasExample from './Component/Navbar';
 
 import { BrowserRouter, Routes, Route } from "react-router";
+
+import Footer from './Component/footer';
 function App() {
 
   
@@ -16,12 +18,15 @@ function App() {
 <OffcanvasExample></OffcanvasExample>
    <AutoPlay></AutoPlay>
 
+  {/* <Hero></Hero> */}
+
        <Routes>
         <Route path='/' element={ <Home></Home>}></Route>
         <Route path='/detail' element={ <Detail></Detail>}></Route>
         <Route path='/detaill/:id' element={ <Detail2></Detail2>}></Route>
     
        </Routes>
+       <Footer></Footer>
        </BrowserRouter>
    
   

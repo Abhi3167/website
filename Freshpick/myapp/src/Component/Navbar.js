@@ -6,16 +6,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { IoCartSharp } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 import PopoverPositionedExample from './pop_overlay';
 
 
 function OffcanvasExample() {
+  let navigate=useNavigate()
   return (
     <>
       {['sm', ].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 sticky-top">
           <Container fluid>
-            <Navbar.Brand href="#"><div className='d-flex' style={{ fontWeight:'bold' , fontSize:'32px'}}><div style={{color:'#f8cb46'}}>Fresh</div> <div style={{color:'#54b226'}}>Pick</div></div> </Navbar.Brand>
+            <Navbar.Brand href="#" onClick={()=>{ navigate('/')}}><div className='d-flex' style={{ fontWeight:'bold' , fontSize:'32px'}}><div style={{color:'#f8cb46'}}>Fresh</div> <div style={{color:'#54b226'}}>Pick</div></div> </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -63,7 +65,24 @@ function OffcanvasExample() {
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
+          <div className=' justify-content-center d-flex text-center w-100 d-lg-none'>
+
+          <Form className="d-flex">
+                  <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                    style={{ width: '70vw' }}
+                  />
+                  <Button variant="outline-success">Search</Button>
+                </Form>
+                
+          
+          </div>
         </Navbar>
+
+       
       ))}
     </>
   );

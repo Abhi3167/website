@@ -1,0 +1,116 @@
+footer {
+    padding: 20px 20px;
+  
+  }
+  #contactus
+  {
+    background-color: #000000;
+    margin-top: 100px;
+  }
+  
+  .footer h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  
+  .offer-list p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .social-icons {
+    display: var(--center-flex);
+    justify-content: var(--justify-center);
+    gap: 15px;
+    margin-left: -20px;
+  }
+  
+  .social-icons a {
+    font-size: 20px;
+    color: #ff8c00;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #b46402;
+    transform: scale(1.129);
+    transition: all 0.3s ease;
+  
+  }
+  
+  .footer-copyright {
+    border-top: 1px solid #d6d6d6;
+  }
+  
+  .footer-border {
+    border-left: 1px solid #d6d6d6;
+    height: 200px;
+  }
+  
+  .footer-sm-border p:hover i {
+    color: #ff8c00;
+    transform: scale(1.129);
+    transition: all 0.3s ease;
+  }
+  
+  .offer-list p:hover i {
+    display: inline-block;
+    color: #ff8c00;
+    transform: scale(1.129) rotate(90deg);
+    transition: all 0.3s ease;
+  }
+  
+  .offer-list p {
+    text-decoration: none;
+    transition: text-decoration-color 0.3s ease;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
+  
+  .offer-list p:hover {
+    text-decoration: underline;
+    text-decoration-color: #ff8c00;
+  }
+  
+  @media (max-width: 768px) {
+    .footer .col-md-3 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  
+    .footer-border {
+      border-bottom: 1px solid #d6d6d6;
+      border-left: 0px;
+      padding: 10px;
+      align-content: center;
+    }
+  
+    .footer-sm-border {
+      border-bottom: 1px solid #d6d6d6;
+      border-left: 0px !important;
+      padding: 10px;
+      align-content: center;
+    }
+  
+    .footer-copyright {
+      border-top: 0px;
+    }
+  
+    .contact-item {
+      justify-content: var(--justify-center);
+    }
+  }
+  
+  @media (max-width:990px) {
+    .footer-sm-border {
+      border-left: 1px solid #d6d6d6;
+      height: 200px;
+      padding: 10px;
+    }
+  }
