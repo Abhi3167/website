@@ -176,7 +176,7 @@ FreshPick does not have any official customer care phone line. Beware of fake nu
 
         <div class="col-md-5 col-lg-3 col-sm-5 footer-border">
           <h3>Logo</h3>
-          <div className='d-flex' style={{ fontWeight:'bold' , fontSize:'32px'}}><div style={{color:'#f8cb46'}}>Fresh</div> <div style={{color:'#54b226'}}>Pick</div></div>
+          <div className='d-flex justify-content-center justify-content-lg-start' style={{ fontWeight:'bold' , fontSize:'32px'}}><div style={{color:'#f8cb46'}}>Fresh</div> <div style={{color:'#54b226'}}>Pick</div></div>
         </div>
         <div class="col-12 footer-copyright">
           <div class="text-center mt-2 fw-bold">Copyright by FreshPick</div>
