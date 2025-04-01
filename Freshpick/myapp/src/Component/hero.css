@@ -40,3 +40,9 @@
     width: 600;
     height: 110px;
   }
+  @media only screen and (max-width: 380px) {
+    .image-section{
+      height: 100px !important;
+  }
+
+  }
