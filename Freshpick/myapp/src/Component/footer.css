@@ -114,3 +114,17 @@ footer {
       padding: 10px;
     }
   }
+  .modalbody
+  {
+    font-size: 16px;
+    color: #1F1F1F;
+    margin-bottom: 12px;
+    font-family: Okra, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    color: #1F1F1F;
+    margin-bottom: 16px;
+  }
