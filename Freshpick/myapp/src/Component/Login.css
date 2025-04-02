@@ -70,7 +70,13 @@ background: linear-gradient(270deg, rgba(135,221,19,1) 0%, rgba(233,255,48,1) 10
 .cl-btn:hover
 {
     background-color: gold;
-    transform: scale(.97);
+    transform: scale(.9);
+    transition: all ease-in-out 1min;
+}
+.cl-btn:active
+{
+    background-color: gold;
+    transform: scale(.9);
     transition: all ease-in-out 1min;
 }
 .n-text

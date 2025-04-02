@@ -44,7 +44,7 @@ const Detail = () => {
         }, 3000)
        }
 
-            {data && (
+{ (
                 <Row className={`align-items-center  mt-4 ${show ? 'd-none' : ''}`}>
                     {/* Product Image */}
                     <Col md={5} className="text-center">
@@ -105,7 +105,7 @@ const Detail = () => {
             )}
 
             {/* Reviews Section */}
-            {data.reviews && data.reviews.length > 0 && (
+            { data.reviews && data.reviews.length > 0 && (
                 <>
                     <h3 className="mt-5 text-center">Customer Reviews</h3>
                     <Row className="mt-3">
