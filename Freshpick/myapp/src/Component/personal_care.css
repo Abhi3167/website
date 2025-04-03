@@ -1,0 +1,49 @@
+.data-col
+{
+    border: 1px solid #d6d6d6;
+    padding: 10px;
+}
+.catrgory-items div
+{
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: sticky;
+}
+
+.mobile-img
+{
+    height: 100px;
+}
+.mobile-row
+{
+    width: 100%;
+}
+.mobliee-c
+{
+    --bs-gutter-x: 0px !important;
+}
+.pos12
+{
+
+    position: sticky !important;
+    top: 200px !important;
+}
+@media only screen and (max-width: 600px) {
+    .img
+    {
+        width: 100vw;
+        height: fit-content;
+        object-fit: contain;
+    }
+    .data-col{
+        padding: 0;
+    }
+   
+  }
+  .mobile-text
+
+  {
+    text-align: center;
+    font-size: 12px;
+  }

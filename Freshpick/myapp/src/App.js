@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route, useLocation,Navigate } from "react-router
 import Footer from './Component/footer';
 import Login from './Component/Login';
 import Sign_up from './Component/Sign_up';
+import Personal_Care from './Component/personal_care';
 let Layout=({children})=>
   {
    const location=useLocation();
@@ -47,6 +48,7 @@ function App() {
         <Route path='/detaill/:id' element={ <Detail2></Detail2>}></Route>
         <Route path='/signup' element={ <Sign_up></Sign_up>}></Route>
         <Route path='/login' element={ <Login></Login>}></Route>
+        <Route path='/personal_care' element={ <Personal_Care></Personal_Care>}></Route>
     
        </Routes>
        {/* <Footer></Footer> */}
