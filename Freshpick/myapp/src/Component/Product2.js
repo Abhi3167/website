@@ -46,6 +46,7 @@ const Product2 = () => {
 
   return<>
     <div className='container'>
+      <div className='px-3 fs-4 fw-bold text-lg-center mt-lg-4 mb-lg-3'>Items </div>
     <div className='row'>
 
         {

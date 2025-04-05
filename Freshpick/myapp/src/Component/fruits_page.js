@@ -1,18 +1,18 @@
 import React from 'react'
-import { personalCare_arr } from './personal'
+import { veg_arr } from './fruits_vegetables'
 import { useState } from 'react'
-import './personal_care.css'
-const Personal_Care = () => {
+import './fruits_vegetables.css'
+const Fruits = () => {
   
   let [category ,setcategory]=useState("")
   let [colorcheck, setcolorchek]=useState(null)
 
   let catrgory_list=[
         { a:"", name:" All Data"},
-        { a: "soaps",name:"Soaps"},
-        { a:"haircare",name:"HairCare"},
-         {a:"skincare",name:"SkinCare"}
-]
+        { a: "veg",name:"Vegetables"},
+        { a:"fruits",name:"Fruits"},
+  ]
+
 let getdata=(element) =>
   {
     setcategory(element.a)
@@ -49,7 +49,7 @@ let getdata=(element) =>
       <div className='row justify-content-evenly mobile-row'>
       {
        
-    personalCare_arr.filter((element)=>{
+       veg_arr.filter((element)=>{
       if(category=="")
       {
         return element
@@ -88,6 +88,7 @@ let getdata=(element) =>
   </>
 }
 
-export default Personal_Care
+export default Fruits
+// Compare this snippet from Freshpick/myapp/src/Component/fruits_vegetables.js:
 
      

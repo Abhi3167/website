@@ -1,6 +1,7 @@
 import React from 'react'
 import { personalCare_arr } from './personal'
 import { useNavigate } from 'react-router-dom'
+import './Personal_section.css'
 const Personal_section = () => {
   const navigate = useNavigate()
   return <>
@@ -13,34 +14,35 @@ const Personal_section = () => {
     })
     
   } */}
-    <div className='d-flex justify-content-center'>
-    <div>
-          <a href="./vegetable_fruits.html">
-            <img
+  <div className='px-3 fs-4 fw-bold text-lg-center mt-lg-4'> Groceries & Kitchen</div>
+    <div className=' mobile-flex'>
+    <div onClick={()=>{navigate('/fruits')}}>
+          
+            <img className="personal-img"
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=200,h=256/layout-engine/2021-12/category-1.png?61ea837b72faf"
               alt=""
             />
-          </a>
+     
         </div>
-        <div>
-          <a href="./grocery.html">
-            <img
+        <div onClick={()=>{navigate('/grocery_staple')}}>
+         
+            <img className="personal-img"
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=200,h=256/layout-engine/2021-12/category-5.png?61ea837dbfaca"
               alt=""
             />
-          </a>
+   
         </div>
-        <div>
-          <a href="./colddrink.html">
-            <img
+        <div onClick={()=>{navigate('/Colddrink')}}>
+          
+            <img className="personal-img"
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=200,h=256/layout-engine/2021-12/category-3.png?61ea837c94944"
               alt=""
             />
-          </a>
+        
         </div>
         <div onClick={()=>{navigate('/personal_care')}}> 
        
-            <img
+            <img className="personal-img"
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=200,h=256/layout-engine/2021-12/category-12.png?61ea83824149d"
               alt=""
             />
@@ -48,7 +50,7 @@ const Personal_section = () => {
         </div>
         <div>
           <a href="">
-            <img
+            <img className="personal-img"
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=200,h=256/layout-engine/2021-12/category-2.png?61ea837c0849c"
               alt=""
             />
@@ -56,15 +58,15 @@ const Personal_section = () => {
         </div>
         <div>
           <a href="">
-            <img
+            <img className="personal-img"
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=200,h=256/layout-engine/2021-12/category-4.png?61ea837d36364"
               alt=""
             />
           </a>
         </div>
-        <div>
+        <div className='mobile-none'>
           <a href="">
-            <img
+            <img className="personal-img "
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=200,h=256/layout-engine/2021-12/category-6.png?61ea837e62719"
               alt=""
             />

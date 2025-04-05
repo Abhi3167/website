@@ -1,17 +1,20 @@
 import React from 'react'
-import { personalCare_arr } from './personal'
+import { groceryArr, juice_data } from './colddrink'
 import { useState } from 'react'
-import './personal_care.css'
-const Personal_Care = () => {
+import './colddrink.css'
+const Colddrink = () => {
   
   let [category ,setcategory]=useState("")
   let [colorcheck, setcolorchek]=useState(null)
 
   let catrgory_list=[
         { a:"", name:" All Data"},
-        { a: "soaps",name:"Soaps"},
-        { a:"haircare",name:"HairCare"},
-         {a:"skincare",name:"SkinCare"}
+        { a: "soft",name:"Soft Drinks"},
+        { a:"juice",name:"Juice"},
+        {a:"soda",name:"Soda"},
+         {a:"energyDrink",name:"Energy Drink"},
+         {a:"herbalDrink",name:"Herbal Drink"},
+         {a:"water",name:"Water"},
 ]
 let getdata=(element) =>
   {
@@ -49,7 +52,7 @@ let getdata=(element) =>
       <div className='row justify-content-evenly mobile-row'>
       {
        
-    personalCare_arr.filter((element)=>{
+       juice_data.filter((element)=>{
       if(category=="")
       {
         return element
@@ -88,6 +91,6 @@ let getdata=(element) =>
   </>
 }
 
-export default Personal_Care
+export default Colddrink
 
      

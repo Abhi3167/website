@@ -5,6 +5,7 @@ import Slider from './slider'
 import Personal_section from './Personal_section'
 
 
+
 const Home = () => {
   return<>
    
@@ -12,6 +13,7 @@ const Home = () => {
    <Personal_section></Personal_section>
    {/* <Hero></Hero> */}
    <Product2></Product2>
+
 
   </>
 }

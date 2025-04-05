@@ -1,0 +1,27 @@
+.personal-img
+{
+    height: 180px;
+}
+.mobile-flex
+{
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+    .mobile-flex {
+      
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: auto;
+       
+       
+    }
+    .mobile-flex div {
+       text-align: center;
+    }
+    .mobile-none
+    {
+        display: none;
+    }
+  }
+ 

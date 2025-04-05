@@ -1,17 +1,19 @@
 import React from 'react'
-import { personalCare_arr } from './personal'
+import { groceryArr } from './grocery_staple'
 import { useState } from 'react'
-import './personal_care.css'
-const Personal_Care = () => {
+import './grocery_staple.css'
+const Grocery_staple = () => {
   
   let [category ,setcategory]=useState("")
   let [colorcheck, setcolorchek]=useState(null)
 
   let catrgory_list=[
         { a:"", name:" All Data"},
-        { a: "soaps",name:"Soaps"},
-        { a:"haircare",name:"HairCare"},
-         {a:"skincare",name:"SkinCare"}
+        { a: "pulses",name:"Pulses"},
+        { a:"Rice",name:"Rice"},
+        {a:"Dry",name:"Dry Fruits"},
+         {a:"oil",name:"Oil"},
+         {a:"ghee",name:"Ghee"},
 ]
 let getdata=(element) =>
   {
@@ -49,7 +51,7 @@ let getdata=(element) =>
       <div className='row justify-content-evenly mobile-row'>
       {
        
-    personalCare_arr.filter((element)=>{
+       groceryArr.filter((element)=>{
       if(category=="")
       {
         return element
@@ -88,6 +90,6 @@ let getdata=(element) =>
   </>
 }
 
-export default Personal_Care
+export default Grocery_staple
 
      

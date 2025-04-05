@@ -13,6 +13,10 @@ import Footer from './Component/footer';
 import Login from './Component/Login';
 import Sign_up from './Component/Sign_up';
 import Personal_Care from './Component/personal_care';
+import Grocery_staple from './Component/grocery_page';
+import Fruits from './Component/fruits_page';
+import Colddrink from './Component/colddrink_page';
+
 let Layout=({children})=>
   {
    const location=useLocation();
@@ -49,6 +53,9 @@ function App() {
         <Route path='/signup' element={ <Sign_up></Sign_up>}></Route>
         <Route path='/login' element={ <Login></Login>}></Route>
         <Route path='/personal_care' element={ <Personal_Care></Personal_Care>}></Route>
+        <Route path='/grocery_staple' element={ <Grocery_staple></Grocery_staple>}></Route>
+        <Route path='/Fruits' element={ <Fruits></Fruits>}></Route>
+        <Route path='/Colddrink' element={ <Colddrink></Colddrink>}></Route>
     
        </Routes>
        {/* <Footer></Footer> */}
