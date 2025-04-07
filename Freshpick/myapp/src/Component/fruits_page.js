@@ -1,8 +1,13 @@
 import React from 'react'
 import { veg_arr } from './fruits_vegetables'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './fruits_vegetables.css'
+import { useDispatch } from 'react-redux';
+import { mycategorydataredux } from './store/category_slice'
 const Fruits = () => {
+   const navigate = useNavigate()
+    const dispatch=useDispatch()
   
   let [category ,setcategory]=useState("")
   let [colorcheck, setcolorchek]=useState(null)
@@ -18,6 +23,12 @@ let getdata=(element) =>
     setcategory(element.a)
          setcolorchek(element.name)
   }
+
+  let getinfo=(item)=>
+    {
+      navigate('/AddCategory/'+item.id)
+       dispatch( mycategorydataredux(item))
+    }
 
   return <>
     <div className='row mobliee-c'>
@@ -61,7 +72,7 @@ let getdata=(element) =>
     }).map((item,index)=>
     {
          return <>
-           <div className='col-5 col-md-3 data-col p-2 '>
+           <div className='col-5 col-md-3 data-col p-2 ' onClick={()=>{getinfo(item)}}>
             <img src={item.image} className='mobile-img'></img>
             <div className='mobile-text'>
               <div>

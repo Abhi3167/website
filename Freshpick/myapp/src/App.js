@@ -16,6 +16,8 @@ import Personal_Care from './Component/personal_care';
 import Grocery_staple from './Component/grocery_page';
 import Fruits from './Component/fruits_page';
 import Colddrink from './Component/colddrink_page';
+import Addcategory from './Component/addcategory';
+import Search from './Component/serach';
 
 let Layout=({children})=>
   {
@@ -56,6 +58,10 @@ function App() {
         <Route path='/grocery_staple' element={ <Grocery_staple></Grocery_staple>}></Route>
         <Route path='/Fruits' element={ <Fruits></Fruits>}></Route>
         <Route path='/Colddrink' element={ <Colddrink></Colddrink>}></Route>
+        <Route path='/AddCategory/:name' element={ <Addcategory></Addcategory>}></Route>
+        <Route path='/search/:name' element={ <Search></Search>}></Route>
+
+
     
        </Routes>
        {/* <Footer></Footer> */}

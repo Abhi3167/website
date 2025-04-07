@@ -1,8 +1,13 @@
 import React from 'react'
 import { personalCare_arr } from './personal'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './personal_care.css'
+import { useDispatch } from 'react-redux';
+import { mycategorydataredux } from './store/category_slice'
 const Personal_Care = () => {
+     const navigate = useNavigate()
+      const dispatch=useDispatch()
   
   let [category ,setcategory]=useState("")
   let [colorcheck, setcolorchek]=useState(null)
@@ -18,7 +23,11 @@ let getdata=(element) =>
     setcategory(element.a)
          setcolorchek(element.name)
   }
-
+  let getinfo=(item)=>
+    {
+      navigate('/AddCategory/'+item.id)
+       dispatch( mycategorydataredux(item))
+    }
   return <>
     <div className='row mobliee-c'>
       <div className='col-3 col-md-2 d-flex justify-content-center mt-5 pos12'>
@@ -61,7 +70,7 @@ let getdata=(element) =>
     }).map((item,index)=>
     {
          return <>
-           <div className='col-5 col-md-3 data-col p-2 '>
+           <div className='col-5 col-md-3 data-col p-2 'onClick={()=>{getinfo(item)}}>
             <img src={item.image} className='mobile-img'></img>
             <div className='mobile-text'>
               <div>

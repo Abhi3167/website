@@ -1,8 +1,13 @@
 import React from 'react'
 import { groceryArr, juice_data } from './colddrink'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './colddrink.css'
+import { useDispatch } from 'react-redux';
+import { mycategorydataredux } from './store/category_slice'
 const Colddrink = () => {
+     const navigate = useNavigate()
+       const dispatch=useDispatch()
   
   let [category ,setcategory]=useState("")
   let [colorcheck, setcolorchek]=useState(null)
@@ -21,6 +26,17 @@ let getdata=(element) =>
     setcategory(element.a)
          setcolorchek(element.name)
   }
+
+  let getinfo=(item)=>
+    {
+      localStorage.setItem("item.id", JSON.stringify(item.name))
+      if(!item.name) 
+      {
+        item.name= localStorage.getItem("item.id")
+      }
+      navigate('/AddCategory/'+item.name)
+      dispatch( mycategorydataredux(item))
+    }
 
   return <>
     <div className='row mobliee-c'>
@@ -64,7 +80,7 @@ let getdata=(element) =>
     }).map((item,index)=>
     {
          return <>
-           <div className='col-5 col-md-3 data-col p-2 '>
+           <div className='col-5 col-md-3 data-col p-2 ' onClick={()=>{getinfo(item)}}>
             <img src={item.image} className='mobile-img'></img>
             <div className='mobile-text'>
               <div>
