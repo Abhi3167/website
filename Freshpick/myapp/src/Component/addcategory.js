@@ -2,7 +2,10 @@ import React from 'react'
 import './addcategory.css'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux';
+import { mycartdataredux } from './store/CartSlice';
 const Addcategory = () => {
+   const dispatch=useDispatch()
    let data = useSelector((state) => state.category);
    console.log("data",data)
    console.log("type",typeof(data))
@@ -19,12 +22,28 @@ if(data.length!=0){
 
    let [mydata, setmydata]=useState()
 
+    let getCart=(data)=>
+    {
+             dispatch(mycartdataredux(data))
+             
+    }
 
 
   return <>
    <div id="prod_left_right">
       <div id="left_prod">
       <img src={data.image}></img>
+      <div  className='mobile-prod'>
+          <div id="right_prod_info">
+            <span id="right_name">{data.name}</span>
+            <button onClick={()=>{getCart(data)}}>add to cart</button>
+            <div id="right_weight">{data.wt}</div>
+            <div id="right_pric d-flex gap-3"> RS:  {data.price}</div>
+            <div id="hr"></div>
+          </div>
+          <div id="right_prod_unit">
+          </div>
+        </div>
         <div id="product">Product Details</div>
         <div id="prod_details">
           <div id="shelf_life" class="width border fs height pd">
@@ -99,7 +118,7 @@ if(data.length!=0){
         <div id="top">
           <div id="right_prod_info">
             <span id="right_name">{data.name}</span>
-            <button>add to cart</button>
+            <button onClick={()=>{getCart(data)}}>add to cart</button>
             <div id="right_weight">{data.wt}</div>
             <div id="right_pric d-flex gap-3"> RS:  {data.price}</div>
             <div id="hr"></div>

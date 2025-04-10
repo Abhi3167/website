@@ -1,0 +1,32 @@
+@media only screen and (max-width: 600px) {
+    .img
+    {
+        width: 100vw;
+        height: fit-content;
+        object-fit: contain;
+    }
+    .data-col{
+        padding: 0;
+    }
+
+    .mobile-img
+{
+    height: 100px;
+}
+.mobile-row
+{
+    width: 100%;
+}
+.mobliee-c
+{
+    --bs-gutter-x: 0px !important;
+}
+.mobile-text
+
+{
+  text-align: center;
+  font-size: 12px;
+}
+   
+  }
+ 

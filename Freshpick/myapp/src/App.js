@@ -18,6 +18,7 @@ import Fruits from './Component/fruits_page';
 import Colddrink from './Component/colddrink_page';
 import Addcategory from './Component/addcategory';
 import Search from './Component/serach';
+import Cart from './Component/my_cart';
 
 let Layout=({children})=>
   {
@@ -60,6 +61,7 @@ function App() {
         <Route path='/Colddrink' element={ <Colddrink></Colddrink>}></Route>
         <Route path='/AddCategory/:name' element={ <Addcategory></Addcategory>}></Route>
         <Route path='/search/:name' element={ <Search></Search>}></Route>
+        <Route path='/cart' element={ <Cart></Cart>}></Route>
 
 
     

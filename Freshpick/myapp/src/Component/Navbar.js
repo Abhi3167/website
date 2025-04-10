@@ -114,8 +114,10 @@ function OffcanvasExample() {
                     className="me-2"
                     aria-label="Search"
                     style={{ width: '70vw' }}
+                    onChange={(e)=>{setSearch(e.target.value)}}  
+                    onKeyDown={getsearch}
                   />
-                  <Button variant="outline-success">Search</Button>
+                  <Button  onClick={getsearchdata} variant="outline-success">Search</Button>
                 </Form>
                 
           

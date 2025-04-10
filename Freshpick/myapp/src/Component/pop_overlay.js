@@ -3,7 +3,9 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import { CgProfile } from "react-icons/cg";
 import './pop.css';
+import { useNavigate } from 'react-router-dom';
 function PopoverPositionedExample() {
+  let navigate=useNavigate()
   return (
     <>
       {['bottom'].map((placement) => (
@@ -18,7 +20,7 @@ function PopoverPositionedExample() {
                 {/* <strong>Holy guacamole!</strong> Check this info. */}
                <div  style={{fontSize:'32px', fontWeight:'bold'}}>
                <div className='list' >personal detail</div>
-                <div className='list'>My Orders</div>
+                <div className='list' onClick={()=>{navigate('/cart')}}>My Orders</div>
                 <div className='list'>My Address</div>
                 <div className='list'>Payment</div>
                 <div className='list'>Share the app</div>

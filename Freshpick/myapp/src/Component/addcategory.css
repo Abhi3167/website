@@ -533,4 +533,86 @@ a {
     padding: 6px;
     color: #333333;
   }
+  .mobile-prod
+  {
+    display: none;
+  }
+  @media only screen and (max-width: 600px) {
+ 
+    #prod_left_right {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 90%;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      height: fit-content !important;
+    }
+    #left_prod {
+     width: 100% !important;
+     margin: 0 !important;
+     padding: 0 !important;
+     height: fit-content !important;
+    }
+    .width{
+      width: 100% !important;
+    }
+    #right_prod #top , #bottom  {
+      width: 100% !important;
+     }
+     #shopping_details {
+      width: 100%;
+      height: 304px;
+      font-size: 12px;
+      line-height: 13.8px;
+  }
+  #right_prod_info {
+    height: 112px;
+    width: 100%;
+    padding: 0 16px 0px 16px;
+    color: #666666;
+    font-size: 12px;
+    line-height: 13.8px;
+}
+.height
+{
+  height: fit-content;
+  padding: 15px;
+}
+#right_prod #top {
+  display: none;
+ }
+ .mobile-prod
+ {
+   display:block;
+   height: fit-content;
+
   
+   width: 100%;
+   padding: 20px 0px 0px 0px;
+ }
+ #product {
+  font-size: 16px;
+  line-height: 3px;
+  height: 18.5px;
+  padding: 16px 0px 10px 0px;
+}
+
+#why_shop {
+  font-size: 16px;
+  height: 18px;
+  width: 100% !important;
+  line-height: 18px;
+  margin: 0px 0px 16px 0px;
+  color: #000000;
+}
+#ingredients, #unit, #disclamier ,#discription
+{
+ padding: 10px !important;
+ height: fit-content !important;
+}
+#contactus {
+  background-color: #000000;
+  margin-top: 0px;
+}
+  }
