@@ -76,6 +76,8 @@ const Login = () => {
                   console.log(apires)
                   if(apires.success===false)
                   {
+                    console.log(apires.user)
+                  
                     seterrHeader("Error in Login")
                     seterror(apires.message)
                     setsu(false)
@@ -85,6 +87,7 @@ const Login = () => {
                   if(apires.success===true)
                     {
                       seterrHeader("Success")
+                      localStorage.setItem('login', JSON.stringify(apires.user))
                       seterror("Signup successfully")
                       setShow(true)
                       setsu(true)

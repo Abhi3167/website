@@ -8,3 +8,9 @@
 .list{
     padding: 10px;
 }
+@media only screen and (max-width: 650px) 
+{
+   .lap{
+    display: none !important;
+   }
+}

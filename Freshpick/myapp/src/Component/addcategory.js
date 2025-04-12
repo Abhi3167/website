@@ -4,7 +4,10 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import { mycartdataredux } from './store/CartSlice';
+import Toast from 'react-bootstrap/Toast';
+import ToastContainer from 'react-bootstrap/ToastContainer';
 const Addcategory = () => {
+      let [show, setShow] = useState(false);
    const dispatch=useDispatch()
    let data = useSelector((state) => state.category);
    console.log("data",data)
@@ -25,6 +28,7 @@ if(data.length!=0){
     let getCart=(data)=>
     {
              dispatch(mycartdataredux(data))
+             setShow(true)
              
     }
 
@@ -184,6 +188,18 @@ if(data.length!=0){
         </div>
       </div>
     </div>
+  { show && <ToastContainer position="bottom-end" className="p-3" style={{ zIndex: 1 }}>
+      
+        <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+          <Toast.Header className='bg-success'>
+           
+            <strong className="me-auto text-white">Item Added</strong>
+            <small className="text-muted">2 seconds ago</small>
+          </Toast.Header>
+          <Toast.Body className='text-success Toast-body' >Successfully Added Into Cart</Toast.Body>
+        </Toast>
+      </ToastContainer> }
+   
   
   </>
 }

@@ -10,8 +10,10 @@ import { useNavigate } from 'react-router-dom';
 import PopoverPositionedExample from './pop_overlay';
 import { useDispatch } from 'react-redux';
 import { mysearchdataredux } from './store/Searchslice';
-
+import { CgProfile } from "react-icons/cg";
+import './Navbar.css'
 import { useState } from 'react';
+import { FaShoppingCart } from "react-icons/fa";
 
 function OffcanvasExample() {
   let dispatch=useDispatch()
@@ -49,13 +51,23 @@ function OffcanvasExample() {
     navigate(`/search/${search}`)
  
   }
+  let getLogout=()=>{
+    localStorage.removeItem('login')
+    navigate('/login')
+  }
   return (
     <>
       {['sm', ].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 sticky-top">
           <Container fluid>
             <Navbar.Brand href="#" onClick={()=>{ navigate('/home')}}><div className='d-flex' style={{ fontWeight:'bold' , fontSize:'32px'}}><div style={{color:'#f8cb46'}}>Fresh</div> <div style={{color:'#54b226'}}>Pick</div></div> </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+       <div>
+       <Navbar.Brand href="#" onClick={()=>{ navigate('/cart')}}> <FaShoppingCart className='ic2' /></Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='nav-t' >
+            <CgProfile  className='ic' > </CgProfile>
+            
+            </Navbar.Toggle>
+       </div>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -63,12 +75,12 @@ function OffcanvasExample() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                <div className='d-flex' style={{ fontWeight:'bold' , fontSize:'32px'}}><div style={{color:'#f8cb46'}}>Fresh</div> <div style={{color:'#54b226'}}>Pick</div></div>
                 </Offcanvas.Title>
               </Offcanvas.Header>
            
               <Offcanvas.Body>
-              <Form className="d-flex">
+              <Form className="d-flex mob-d">
                   <Form.Control
                     type="search"
                     placeholder="Search"
@@ -83,9 +95,9 @@ function OffcanvasExample() {
                 </Form>
                 <Nav className="justify-content-left flex-grow-1 pe-3  px-4">
                   
-                  <Button variant="success" className='px-4' style={{width:' '}}> <IoCartSharp style={{fontSize:'20px'}} /> My Cart</Button>
-                  
-                  <PopoverPositionedExample> </PopoverPositionedExample>
+                  <Button variant="success" className='px-4 mob-d' style={{width:' '}} onClick={()=>{navigate('/cart')}}> <IoCartSharp style={{fontSize:'20px'}} /> My Cart</Button>
+               
+   {window.innerWidth>450 ?            <PopoverPositionedExample className='lap'> </PopoverPositionedExample>:null}
                   {/* <Nav.Link href="#action2">Link</Nav.Link> */}
                   {/* <NavDropdown
                     title="Dropdown"
@@ -101,6 +113,15 @@ function OffcanvasExample() {
                     </NavDropdown.Item>
                   </NavDropdown> */}
                 </Nav>
+                <div className='md-nav-item'  style={{fontSize:'24px', fontWeight:'bold'}}>
+               <div className='list' >Personal detail</div>
+                <div className='list' onClick={()=>{navigate('/cart')}}>My Orders</div>
+                <div className='list'>My Address</div>
+                <div className='list'>Payment</div>
+                <div className='list' onClick={()=>{navigate('/about_us')}}>About us</div>
+                <div className='list text-danger' onClick={getLogout} >Logout</div>
+               </div>
+              
          
               </Offcanvas.Body>
             </Navbar.Offcanvas>

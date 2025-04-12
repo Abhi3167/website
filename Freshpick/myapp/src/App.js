@@ -19,7 +19,9 @@ import Colddrink from './Component/colddrink_page';
 import Addcategory from './Component/addcategory';
 import Search from './Component/serach';
 import Cart from './Component/my_cart';
-
+import About_us from './Component/about_us';
+import Payment from './Component/payment';
+import Private from './Component/private';
 let Layout=({children})=>
   {
    const location=useLocation();
@@ -49,12 +51,12 @@ function App() {
   {/* <Hero></Hero> */}
 
        <Routes>
+        
+        <Route element={<Private></Private>}>
         <Route path='/' element={ <Navigate to='/login'/>}></Route>
         <Route path='/home' element={ <Home></Home>}></Route>
         <Route path='/detail' element={ <Detail></Detail>}></Route>
         <Route path='/detaill/:id' element={ <Detail2></Detail2>}></Route>
-        <Route path='/signup' element={ <Sign_up></Sign_up>}></Route>
-        <Route path='/login' element={ <Login></Login>}></Route>
         <Route path='/personal_care' element={ <Personal_Care></Personal_Care>}></Route>
         <Route path='/grocery_staple' element={ <Grocery_staple></Grocery_staple>}></Route>
         <Route path='/Fruits' element={ <Fruits></Fruits>}></Route>
@@ -62,6 +64,12 @@ function App() {
         <Route path='/AddCategory/:name' element={ <Addcategory></Addcategory>}></Route>
         <Route path='/search/:name' element={ <Search></Search>}></Route>
         <Route path='/cart' element={ <Cart></Cart>}></Route>
+        <Route path='/about_us' element={ <About_us></About_us>}></Route>
+        <Route path='/Payment' element={ <Payment></Payment>}></Route>
+        </Route>
+
+        <Route path='/signup' element={ <Sign_up></Sign_up>}></Route>
+        <Route path='/login' element={ <Login></Login>}></Route>
 
 
     

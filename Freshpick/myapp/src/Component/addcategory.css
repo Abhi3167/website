@@ -447,6 +447,7 @@ a {
     height: 28px;
     width: 100px;
     background-color: #ffe141;
+
     color: #666666;
     /* background: transparent; */
     border: transparent;
@@ -615,4 +616,21 @@ a {
   background-color: #000000;
   margin-top: 0px;
 }
+
+#right_name {
+    font-size: 16px;
+    height: 21px;
+    width: 408px;
+    margin: 0px 25px 0px 0px;
+    padding: 0px 2px 0px 0px;
+    color: #333333;
+    white-space: pre-wrap;
+}
+#right_name button{
+ background-color: #0c831f;
+}
   }
+.Toast-body
+{
+  background-color: #cef7d5;
+}

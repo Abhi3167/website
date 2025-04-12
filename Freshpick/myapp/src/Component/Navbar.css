@@ -1,0 +1,37 @@
+.navbar-toggler-icon{
+    display: none !important;
+}
+.nav-t
+{
+    border: none !important;
+}
+.ic{
+    font-size: 32px;
+}
+.ic2{
+    font-size: 25px;
+}
+.md-nav-item
+{
+    display: none;
+}
+.lap{
+    height: 100%;
+}
+@media only screen and (max-width: 600px) 
+{
+    .mob-d{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 650px) 
+{
+    .md-nav-item
+{
+    display: block;
+}
+.lap
+{
+    display: none !important;
+}
+}
