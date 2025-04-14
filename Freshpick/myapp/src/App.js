@@ -22,6 +22,7 @@ import Cart from './Component/my_cart';
 import About_us from './Component/about_us';
 import Payment from './Component/payment';
 import Private from './Component/private';
+import Personal_detail from './Component/personal_detail';
 let Layout=({children})=>
   {
    const location=useLocation();
@@ -66,6 +67,8 @@ function App() {
         <Route path='/cart' element={ <Cart></Cart>}></Route>
         <Route path='/about_us' element={ <About_us></About_us>}></Route>
         <Route path='/Payment' element={ <Payment></Payment>}></Route>
+        <Route path='/personal_detail' element={ <Personal_detail></Personal_detail>}></Route>
+
         </Route>
 
         <Route path='/signup' element={ <Sign_up></Sign_up>}></Route>
@@ -78,7 +81,9 @@ function App() {
        </Layout>
        </BrowserRouter>
    
-  
+
+
+
   
   </>
 }

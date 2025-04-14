@@ -1,0 +1,44 @@
+.personal-body
+{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+}
+.personal-cont
+{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+ 
+}
+.personal-row{
+
+   width: 100% !important;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+.p-head
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+.s-btn{
+    padding: 5px 20px;
+    background-color: red;
+    border-radius: 15px;
+    color: white;
+}
+.b{
+    background-color:#d6d6d6
+
+}
+@media only screen and (min-width: 600px)
+{
+    .b
+    {
+        background-color:  white;
+    }
+}

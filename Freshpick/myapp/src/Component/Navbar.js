@@ -114,7 +114,7 @@ function OffcanvasExample() {
                   </NavDropdown> */}
                 </Nav>
                 <div className='md-nav-item'  style={{fontSize:'24px', fontWeight:'bold'}}>
-               <div className='list' >Personal detail</div>
+               <div className='list' onClick={()=>{navigate('/personal_detail')}}>Personal detail</div>
                 <div className='list' onClick={()=>{navigate('/cart')}}>My Orders</div>
                 <div className='list'>My Address</div>
                 <div className='list'>Payment</div>
