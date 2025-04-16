@@ -74,7 +74,7 @@ const Sign_up = () => {
                     setShow(true)
                     setsu(true)
                    
-                   await fetch('http://192.168.18.59:8088/signup', {
+                   await fetch('  http://192.168.31.238:8088/signup', {
                       method: 'POST',
                       headers: {
                         'Content-Type': 'application/json',

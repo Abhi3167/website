@@ -23,6 +23,7 @@ import About_us from './Component/about_us';
 import Payment from './Component/payment';
 import Private from './Component/private';
 import Personal_detail from './Component/personal_detail';
+import ScrollToTop from './Component/scroltotalk';
 let Layout=({children})=>
   {
    const location=useLocation();
@@ -46,6 +47,7 @@ function App() {
   return <>
 <BrowserRouter>
 <Layout>
+  <ScrollToTop></ScrollToTop>
 {/* <OffcanvasExample></OffcanvasExample>
    <AutoPlay></AutoPlay> */}
 

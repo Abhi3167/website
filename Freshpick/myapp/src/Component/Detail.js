@@ -42,8 +42,9 @@ const Detail = () => {
             setShow(false)
 
         }, 3000)
+        
        }
-
+<div className={`container ${show ? 'd-none' : ''}`}>
 { (
                 <Row className={`align-items-center  mt-4 ${show ? 'd-none' : ''}`}>
                     {/* Product Image */}
@@ -95,9 +96,9 @@ const Detail = () => {
                     <Row className="text-center mt-3">
                         {data.images.map((image, index) => (
                             <Col md={3} key={index}>
-                                <Card className="p-2">
+                                <div className="p-2">
                                     <Card.Img src={image} className="img-fluid rounded" />
-                                </Card>
+                                </div>
                             </Col>
                         ))}
                     </Row>
@@ -111,17 +112,18 @@ const Detail = () => {
                     <Row className="mt-3">
                         {data.reviews.map((review, index) => (
                             <Col md={4} key={index}>
-                                <Card className="p-3 shadow-sm">
+                                <div className="p-3 shadow-sm">
                                     <Card.Text><b>⭐ Rating:</b> {review.rating}</Card.Text>
                                     <Card.Text><b>📝 Comment:</b> {review.comment}</Card.Text>
                                     <Card.Text className="text-muted"><b>📅 Date:</b> {review.date.toLocaleString()}</Card.Text>
-                                </Card>
+                                </div>
                             </Col>
                         ))}
                     </Row>
                 </>
             )}
             <More_items></More_items>
+            </div>
         </Container>
 
 

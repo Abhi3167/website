@@ -44,7 +44,9 @@ const Detail2 = () => {
             setShow(false)
 
         }, 3000)
+
        }
+       <div className={`container ${show ? 'd-none' : ''}`}>
 
             {data && (
                 <Row className={`align-items-center  mt-4 ${show ? 'd-none' : ''}`}>
@@ -124,6 +126,7 @@ const Detail2 = () => {
                 </>
             )}
             <More_items></More_items>
+            </div>
         </Container>
 
   </>

@@ -61,7 +61,7 @@ const Login = () => {
                    
                    
                   
-                let apidata= await fetch('http://192.168.18.59:8088/login', {
+                let apidata= await fetch('  http://192.168.31.238:8088/login', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
