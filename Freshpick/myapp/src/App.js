@@ -24,6 +24,7 @@ import Payment from './Component/payment';
 import Private from './Component/private';
 import Personal_detail from './Component/personal_detail';
 import ScrollToTop from './Component/scroltotalk';
+import MyOrder  from './Component/my_order';
 let Layout=({children})=>
   {
    const location=useLocation();
@@ -70,6 +71,7 @@ function App() {
         <Route path='/about_us' element={ <About_us></About_us>}></Route>
         <Route path='/Payment' element={ <Payment></Payment>}></Route>
         <Route path='/personal_detail' element={ <Personal_detail></Personal_detail>}></Route>
+        <Route path='/myorder' element={ <MyOrder></MyOrder>}></Route>
 
         </Route>
 

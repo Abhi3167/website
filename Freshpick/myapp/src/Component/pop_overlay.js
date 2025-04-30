@@ -25,9 +25,9 @@ function PopoverPositionedExample() {
                 {/* <strong>Holy guacamole!</strong> Check this info. */}
                <div  style={{fontSize:'32px', fontWeight:'bold'}}   className='lap'>
                <div className='list'onClick={()=>{navigate('/personal_detail')}} >personal detail</div>
-                <div className='list' onClick={()=>{navigate('/cart')}}>My Orders</div>
+                <div className='list' onClick={()=>{navigate('/cart')}}>My Cart</div>
                 <div className='list'>My Address</div>
-                <div className='list'>Payment</div>
+                <div className='list'onClick={()=>{navigate('/myorder')}}>My Order</div>
                 <div className='list' onClick={()=>{navigate('/about_us')}} >About us</div>
                 <div className='list text-danger' onClick={getLogout} >Logout</div>
                </div>
