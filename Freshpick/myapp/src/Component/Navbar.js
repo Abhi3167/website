@@ -116,7 +116,7 @@ function OffcanvasExample() {
                 <div className='md-nav-item'  style={{fontSize:'24px', fontWeight:'bold'}}>
                <div className='list' onClick={()=>{navigate('/personal_detail')}}>Personal detail</div>
                 <div className='list' onClick={()=>{navigate('/cart')}}>My Cart</div>
-                <div className='list'>My Address</div>
+                {/* <div className='list'>My Address</div> */}
                 <div className='list'nClick={()=>{navigate('/myorder')}}>My Order</div>
                 <div className='list' onClick={()=>{navigate('/about_us')}}>About us</div>
                 <div className='list text-danger' onClick={getLogout} >Logout</div>
